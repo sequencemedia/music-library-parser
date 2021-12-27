@@ -1,6 +1,6 @@
 # @sequencemedia/itunes-library-parser
 
-JavaScript functions and XSL stylesheets to parse an Apple Music `Library.xml` file and transform it to [`m3u`](https://en.wikipedia.org/wiki/M3U) files, JSON, or JavaScript.
+JavaScript functions and XSL stylesheets to parse an Apple Music `Library.xml` file and transform it to [`m3u`](https://en.wikipedia.org/wiki/M3U) files, JSON, JavaScript, or EcmaScript.
 
 Requires [Java](https://www.oracle.com/java/technologies/javase-downloads.html) and [Saxon PE](https://www.saxonica.com/welcome/welcome.xml).
 
