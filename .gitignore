@@ -1,0 +1,21 @@
+# Node modules
+/node_modules
+
+# Mac
+.DS_Store
+
+# Development
+*.xml
+*.json
+*.m3u8
+*.m3u
+/Music Library
+
+!package.json
+!package-lock.json
+
+# User-defined NPM configuration
+.npmrc
+
+# User-defined NVM configuration
+.nvmrc

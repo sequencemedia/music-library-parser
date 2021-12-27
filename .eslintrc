@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "extends": "standard",
+  "env": {
+    "node": true,
+    "es2020": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "@sequencemedia/music-library-parser",
+  "version": "1.0.0",
+  "description": "Parse Apple Music Library XML to JSON, JS, ES, or M3U",
+  "keywords": [
+    "music",
+    "library",
+    "xml",
+    "parser",
+    "music",
+    "audio",
+    "video",
+    "track",
+    "playlist",
+    "json",
+    "m3u",
+    "m3u8"
+  ],
+  "main": "./index.mjs",
+  "type": "module",
+  "author": "Jonathan Perry for Sequence Media Limited <sequencemedia@sequencemedia.net>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.13.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sequencemedia/music-library-parser"
+  },
+  "homepage": "https://github.com/sequencemedia/music-library-parser",
+  "bugs": {
+    "url": "https://github.com/sequencemedia/music-library-parser/issues"
+  },
+  "scripts": {
+    "lint": "eslint . --ext .mjs --ext .cjs",
+    "lint:fix": "npm run lint -- --fix",
+    "start": "cross-env DEBUG=@sequencemedia/music-library-parser* NODE_ENV=production node .",
+    "dev": "cross-env DEBUG=@sequencemedia/music-library-parser* NODE_ENV=development node ."
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "debug": "^4.3.3",
+    "rimraf": "^3.0.2",
+    "supports-color": "^9.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.5",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/plugin-proposal-export-default-from": "^7.16.5",
+    "@babel/plugin-proposal-export-namespace-from": "^7.16.5",
+    "@babel/preset-env": "^7.16.5",
+    "core-js": "^3.20.1",
+    "eslint": "7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "5.2.0"
+  },
+  "imports": {
+    "#music-library-parser": "./src/js/index.mjs",
+    "#music-library-parser/library": "./src/js/library/index.mjs",
+    "#music-library-parser/library/transform": "./src/js/library/transform/index.mjs",
+    "#music-library-parser/library/playlists": "./src/js/library/playlists/index.mjs",
+    "#music-library-parser/library/playlists/transform": "./src/js/library/playlists/transform/index.mjs",
+    "#music-library-parser/library/tracks": "./src/js/library/tracks/index.mjs",
+    "#music-library-parser/library/tracks/transform": "./src/js/library/tracks/transform/index.mjs",
+    "#music-library-parser/transform": "./src/js/transform/index.mjs"
+  }
+}
