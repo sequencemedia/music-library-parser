@@ -18,22 +18,52 @@ const OPTIONS = {
   maxBuffer: 1024 * 500
 }
 
-export function hasPackageVersionChanges () {
-  log('hasPackageVersionChanges')
+const BRANCH = 'master'
+
+const trim = (v) => v.split('\n').map((v) => v.trimEnd()).join('\n').trim()
+
+function use (key) {
+  const log = debug(`@modernpoacher/deps:${key}`)
+
+  return function use (v) {
+    log(trim(v))
+  }
+}
+
+function getGitRemoteShowOriginHeadBranch () {
+  log('getGitRemoteShowOriginHeadBranch')
 
   return (
     new Promise((resolve, reject) => {
-      exec('git diff HEAD origin/main package.json', OPTIONS, (e, v) => (!e) ? resolve(PACKAGE_VERSION_CHANGES.test(v)) : reject(e))
+      const command = 'git remote show origin | awk \'/HEAD branch/ {print $NF}\''
+
+      const {
+        stdout,
+        stderr
+      } = exec(command, OPTIONS, (e, v = '') => (!e) ? resolve(trim(v)) : reject(e))
+
+      stdout.on('data', use('git-remote-show-origin-head-branch'))
+      stderr.on('data', use('git-remote-show-origin-head-branch'))
     })
   )
 }
 
-export function notPackageVersionChanges () {
+export function hasPackageVersionChanges (branch = BRANCH) {
+  log('hasPackageVersionChanges')
+
+  return (
+    new Promise((resolve, reject) => {
+      exec(`git diff HEAD origin/${branch} package.json`, OPTIONS, (e, v) => (!e) ? resolve(PACKAGE_VERSION_CHANGES.test(v)) : reject(e))
+    })
+  )
+}
+
+export function notPackageVersionChanges (branch = BRANCH) {
   log('notPackageVersionChanges')
 
   return (
     new Promise((resolve, reject) => {
-      exec('git diff HEAD origin/main package.json', OPTIONS, (e, v) => (!e) ? resolve(PACKAGE_VERSION_CHANGES.test(v) !== true) : reject(e))
+      exec(`git diff HEAD origin/${branch} package.json`, OPTIONS, (e, v) => (!e) ? resolve(PACKAGE_VERSION_CHANGES.test(v) !== true) : reject(e))
     })
   )
 }
@@ -58,12 +88,12 @@ export function notStagedChanges () {
   )
 }
 
-export function notPushedChanges () {
+export function notPushedChanges (branch = BRANCH) {
   log('notPushedChanges')
 
   return (
     new Promise((resolve, reject) => {
-      exec('git log origin/main..HEAD', OPTIONS, (e, v) => (!e) ? resolve(!!v) : reject(e))
+      exec(`git log origin/${branch}..HEAD`, OPTIONS, (e, v) => (!e) ? resolve(!!v) : reject(e))
     })
   )
 }
@@ -103,7 +133,7 @@ export default async function preCommit () {
       /**
        *  Not package version changes, continue
        */
-      if (await notPackageVersionChanges()) {
+      if (await notPackageVersionChanges(await getGitRemoteShowOriginHeadBranch())) {
         await patchPackageVersion()
         await addPackageVersionChanges()
       }
