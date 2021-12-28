@@ -37,7 +37,7 @@
     "start": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=production node .",
     "dev": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=development node .",
     "gulp": "gulp --color",
-    "pre-commit": "npm run lint && npm run gulp -- pre-commit"
+    "pre-commit": "npm run lint && cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* npm run gulp -- pre-commit"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
