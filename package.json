@@ -35,7 +35,9 @@
     "lint": "eslint . --ext .mjs --ext .cjs",
     "lint:fix": "npm run lint -- --fix",
     "start": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=production node .",
-    "dev": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=development node ."
+    "dev": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=development node .",
+    "gulp": "gulp --color",
+    "pre-commit": "npm run lint && npm run gulp -- pre-commit"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
@@ -55,7 +57,9 @@
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "5.2.0"
+    "eslint-plugin-promise": "5.2.0",
+    "gulp": "^4.0.2",
+    "husky": "^7.0.4"
   },
   "imports": {
     "#music-library-parser": "./src/js/index.mjs",
@@ -65,6 +69,7 @@
     "#music-library-parser/library/playlists/transform": "./src/js/library/playlists/transform/index.mjs",
     "#music-library-parser/library/tracks": "./src/js/library/tracks/index.mjs",
     "#music-library-parser/library/tracks/transform": "./src/js/library/tracks/transform/index.mjs",
-    "#music-library-parser/transform": "./src/js/transform/index.mjs"
+    "#music-library-parser/transform": "./src/js/transform/index.mjs",
+    "#build/gulp/*": "./build/gulp/*.mjs"
   }
 }
