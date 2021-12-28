@@ -23,7 +23,7 @@ export function hasPackageVersionChanges () {
 
   return (
     new Promise((resolve, reject) => {
-      exec('git diff HEAD origin/master package.json', OPTIONS, (e, v) => (!e) ? resolve(PACKAGE_VERSION_CHANGES.test(v)) : reject(e))
+      exec('git diff HEAD origin/main package.json', OPTIONS, (e, v) => (!e) ? resolve(PACKAGE_VERSION_CHANGES.test(v)) : reject(e))
     })
   )
 }
@@ -33,7 +33,7 @@ export function notPackageVersionChanges () {
 
   return (
     new Promise((resolve, reject) => {
-      exec('git diff HEAD origin/master package.json', OPTIONS, (e, v) => (!e) ? resolve(PACKAGE_VERSION_CHANGES.test(v) !== true) : reject(e))
+      exec('git diff HEAD origin/main package.json', OPTIONS, (e, v) => (!e) ? resolve(PACKAGE_VERSION_CHANGES.test(v) !== true) : reject(e))
     })
   )
 }
@@ -63,7 +63,7 @@ export function notPushedChanges () {
 
   return (
     new Promise((resolve, reject) => {
-      exec('git log origin/master..HEAD', OPTIONS, (e, v) => (!e) ? resolve(!!v) : reject(e))
+      exec('git log origin/main..HEAD', OPTIONS, (e, v) => (!e) ? resolve(!!v) : reject(e))
     })
   )
 }
