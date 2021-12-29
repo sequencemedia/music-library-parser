@@ -71,7 +71,6 @@
     "#music-library-parser/library/playlists/transform": "./src/js/library/playlists/transform/index.mjs",
     "#music-library-parser/library/tracks": "./src/js/library/tracks/index.mjs",
     "#music-library-parser/library/tracks/transform": "./src/js/library/tracks/transform/index.mjs",
-    "#music-library-parser/transform": "./src/js/transform/index.mjs",
-    "#build/gulp/*": "./build/gulp/*.mjs"
+    "#music-library-parser/transform": "./src/js/transform/index.mjs"
   }
 }
