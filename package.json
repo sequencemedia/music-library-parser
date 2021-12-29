@@ -37,15 +37,14 @@
     "start": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=production node .",
     "dev": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=development node .",
     "gulp": "gulp --color",
-    "pre-commit": "npm run lint && cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* npm run gulp -- pre-commit",
-    "post-commit": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* npm run gulp -- post-commit",
+    "pre-commit": "npm run lint",
+    "post-commit": "cross-env DEBUG=@sequencemedia/hooks,@sequencemedia/hooks:* npm run gulp -- post-commit",
     "prepare": "husky install"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
     "debug": "^4.3.3",
-    "rimraf": "^3.0.2",
-    "supports-color": "^9.2.1"
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
@@ -54,6 +53,7 @@
     "@babel/plugin-proposal-export-default-from": "^7.16.5",
     "@babel/plugin-proposal-export-namespace-from": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
+    "@sequencemedia/hooks": "^1.0.0",
     "core-js": "^3.20.1",
     "eslint": "7.32.0",
     "eslint-config-standard": "^16.0.3",

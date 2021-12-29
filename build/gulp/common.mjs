@@ -125,7 +125,7 @@ export function patchPackageVersion () {
 
   return (
     new Promise((resolve, reject) => {
-      exec('npm version patch -m %s -n --no-git-tag-version --no-verify', OPTIONS, (e) => (!e) ? resolve() : reject(e))
+      exec('npm version patch -m %s -n --commit-hooks false --no-verify', OPTIONS, (e) => (!e) ? resolve() : reject(e))
     })
   )
 }
