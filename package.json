@@ -38,7 +38,7 @@
     "dev": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=development node .",
     "gulp": "gulp --color",
     "pre-commit": "npm run lint",
-    "post-commit": "cross-env DEBUG=@sequencemedia/hooks,@sequencemedia/hooks:* npm run gulp -- post-commit",
+    "post-commit": "npm run gulp -- post-commit",
     "prepare": "husky install"
   },
   "dependencies": {
