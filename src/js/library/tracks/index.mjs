@@ -68,6 +68,9 @@ export async function toM3U (jar, xml, destination) {
            *  Clear the destination directory
            */
           await clear(destination)
+
+          log(`Parsing "${xml}" ...`)
+
           /**
            *  Parse these values immediately
            */
