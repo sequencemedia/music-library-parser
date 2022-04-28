@@ -54,7 +54,7 @@
     "@babel/plugin-proposal-export-namespace-from": "^7.16.7",
     "@babel/preset-env": "^7.16.11",
     "@sequencemedia/hooks": "^1.0.102",
-    "core-js": "^3.22.2",
+    "core-js": "^3.22.3",
     "eslint": "^8.14.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
