@@ -61,7 +61,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "gulp": "^4.0.2",
-    "husky": "^7.0.4"
+    "husky": "^8.0.0"
   },
   "imports": {
     "#music-library-parser": "./src/js/index.mjs",
