@@ -53,15 +53,15 @@
     "@babel/plugin-proposal-export-default-from": "^7.16.7",
     "@babel/plugin-proposal-export-namespace-from": "^7.16.7",
     "@babel/preset-env": "^7.17.10",
-    "@sequencemedia/hooks": "^1.0.102",
-    "core-js": "^3.22.4",
-    "eslint": "^8.14.0",
+    "@sequencemedia/hooks": "^1.0.112",
+    "core-js": "^3.22.5",
+    "eslint": "^8.15.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "gulp": "^4.0.2",
-    "husky": "^7.0.4"
+    "husky": "^8.0.1"
   },
   "imports": {
     "#music-library-parser": "./src/js/index.mjs",
