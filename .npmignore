@@ -1,24 +1,27 @@
+# NPM
+.npmignore
+.npmrc
+
+# Deps
 .DS_Store
 
-**/node_modules/**/*
-**/npm-debug.log
-
 .circleci
-.github
+.husky
 
 .editorconfig
+
 .eslintignore
 .eslintrc
 
+.github
 .gitignore
-.logs
 
 # NPM
-.npmrc
 .npmignore
+.npmrc
 
 # NVM
 .nvmrc
 
-# Development
+# Deps
 .depsrc
