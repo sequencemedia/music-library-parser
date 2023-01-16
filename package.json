@@ -44,7 +44,7 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
-    "rimraf": "^4.0.5"
+    "rimraf": "^4.0.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
