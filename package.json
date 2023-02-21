@@ -47,13 +47,13 @@
     "rimraf": "^4.1.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12",
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
     "@babel/eslint-parser": "^7.19.1",
     "@babel/plugin-proposal-export-default-from": "^7.18.10",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
     "@babel/preset-env": "^7.20.2",
-    "@sequencemedia/hooks": "^1.0.332",
+    "@sequencemedia/hooks": "^1.0.333",
     "core-js": "^3.28.0",
     "eslint": "^8.34.0",
     "eslint-config-standard": "^17.0.0",
