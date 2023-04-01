@@ -1,0 +1,14 @@
+# Default behavior
+* text=auto
+
+# LF line endings
+*.json text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.mts text eol=lf
+.editorconfig text eol=lf
+.eslintignore text eol=lf
+.eslintrc text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.husky/* text eol=lf
