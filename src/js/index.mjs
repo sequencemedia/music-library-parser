@@ -1,12 +1,18 @@
-import path from 'path'
+import {
+  resolve
+} from 'node:path'
 import {
   rimraf
 } from 'rimraf'
 
-export const clear = (destination = './Music Library') => (
-  new Promise((resolve, reject) => {
-    rimraf(`${path.resolve(destination)}/*`, (e) => (!e) ? resolve() : reject(e))
-  })
-)
+export function clear (destination = './Music Library') {
+  const d = resolve(destination)
+
+  return (
+    new Promise((resolve, reject) => {
+      rimraf(`${d}/*`, (e) => (!e) ? resolve() : reject(e))
+    })
+  )
+}
 
 export * as library from '#music-library-parser/library'
