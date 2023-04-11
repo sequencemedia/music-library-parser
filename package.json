@@ -36,9 +36,6 @@
     "lint:fix": "npm run lint -- --fix",
     "start": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=production node .",
     "dev": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=development node .",
-    "gulp": "gulp --color",
-    "pre-commit": "npm run lint",
-    "post-commit": "npm run gulp -- post-commit",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -60,7 +57,6 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
-    "gulp": "^4.0.2",
     "husky": "^8.0.3"
   },
   "imports": {
