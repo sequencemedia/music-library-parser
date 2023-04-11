@@ -1,5 +1,7 @@
 import path from 'path'
-import rimraf from 'rimraf'
+import {
+  rimraf
+} from 'rimraf'
 
 export const clear = (destination = './Music Library') => (
   new Promise((resolve, reject) => {
