@@ -41,7 +41,7 @@
   "dependencies": {
     "cross-env": "^7.0.3",
     "debug": "^4.3.4",
-    "rimraf": "^5.0.0"
+    "rimraf": "^5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.21.5",
@@ -52,7 +52,7 @@
     "@babel/preset-env": "^7.21.5",
     "@sequencemedia/hooks": "^1.0.419",
     "core-js": "^3.30.2",
-    "eslint": "^8.40.0",
+    "eslint": "^8.41.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-node": "^11.1.0",
