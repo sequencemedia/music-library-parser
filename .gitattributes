@@ -2,13 +2,25 @@
 * text=auto
 
 # LF line endings
+*.yaml text eol=lf
+*.yml text eol=lf
 *.json text eol=lf
+*.js text eol=lf
 *.mjs text eol=lf
 *.cjs text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
 *.mts text eol=lf
+*.cts text eol=lf
+*.sh text eol=lf
+.depsrc text eol=lf
 .editorconfig text eol=lf
 .eslintignore text eol=lf
 .eslintrc text eol=lf
 .gitattributes text eol=lf
 .gitignore text eol=lf
+.npmignore text eol=lf
+.npmrc text eol=lf
+.nvmrc text eol=lf
+.babelrc text eol=lf
 .husky/* text eol=lf
