@@ -49,8 +49,8 @@
   "devDependencies": {
     "@babel/core": "^7.22.11",
     "@babel/eslint-parser": "^7.22.11",
-    "@babel/preset-env": "^7.22.10",
-    "@sequencemedia/hooks": "^1.0.448",
+    "@babel/preset-env": "^7.22.14",
+    "@sequencemedia/hooks": "^1.0.449",
     "core-js": "^3.32.1",
     "eslint": "^8.48.0",
     "eslint-config-standard": "^17.1.0",
