@@ -2,9 +2,7 @@ import {
   resolve,
   join
 } from 'node:path'
-import {
-  rimraf
-} from 'rimraf'
+import rimraf from 'rimraf'
 
 export const clear = (destination = './Music Library') => (
   rimraf(join(resolve(destination), '*'))
