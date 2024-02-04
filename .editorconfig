@@ -15,7 +15,7 @@ indent_style = tab
 indent_size = 4
 
 # Unix-style newlines with a newline ending every file
-[*.{mjs,cjs}]
+[*.{mjs,cjs,js}]
 end_of_line = lf
 insert_final_newline = true
 
