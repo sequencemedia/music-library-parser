@@ -1,3 +1,2 @@
 .circleci
-lib
-src/xml
+.github

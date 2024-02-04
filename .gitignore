@@ -9,7 +9,6 @@
 *.json
 *.m3u8
 *.m3u
-/Music Library
 
 !package.json
 !package-lock.json
