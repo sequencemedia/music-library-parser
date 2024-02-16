@@ -40,7 +40,7 @@
     "lint:fix": "npm run lint -- --fix",
     "start": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=production node .",
     "dev": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=development node .",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
@@ -50,7 +50,7 @@
     "@babel/core": "^7.23.9",
     "@babel/eslint-parser": "^7.23.10",
     "@babel/preset-env": "^7.23.9",
-    "@sequencemedia/hooks": "^1.0.480",
+    "@sequencemedia/hooks": "^1.0.481",
     "core-js": "^3.36.0",
     "eslint": "^8.56.0",
     "eslint-config-standard": "^17.1.0",
