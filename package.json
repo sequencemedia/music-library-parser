@@ -36,11 +36,11 @@
     "url": "https://github.com/sequencemedia/music-library-parser/issues"
   },
   "scripts": {
+    "dev": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=development node .",
     "lint": "eslint . --ext .mjs,.cjs",
     "lint:fix": "npm run lint -- --fix",
-    "start": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=production node .",
-    "dev": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=development node .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "start": "cross-env DEBUG=@sequencemedia/music-library-parser,@sequencemedia/music-library-parser:* NODE_ENV=production node ."
   },
   "dependencies": {
     "cross-env": "^7.0.3",
@@ -59,11 +59,11 @@
   "imports": {
     "#music-library-parser": "./src/js/index.mjs",
     "#music-library-parser/library": "./src/js/library/index.mjs",
-    "#music-library-parser/library/transform": "./src/js/library/transform/index.mjs",
     "#music-library-parser/library/playlists": "./src/js/library/playlists/index.mjs",
     "#music-library-parser/library/playlists/transform": "./src/js/library/playlists/transform/index.mjs",
     "#music-library-parser/library/tracks": "./src/js/library/tracks/index.mjs",
     "#music-library-parser/library/tracks/transform": "./src/js/library/tracks/transform/index.mjs",
+    "#music-library-parser/library/transform": "./src/js/library/transform/index.mjs",
     "#music-library-parser/transform": "./src/js/transform/index.mjs"
   }
 }
