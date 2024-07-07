@@ -21,7 +21,7 @@
   "author": {
     "name": "Jonathan Perry for Sequence Media Limited",
     "email": "sequencemedia@sequencemedia.net",
-    "url": "http://sequencemedia.net"
+    "url": "https://sequencemedia.net"
   },
   "license": "ISC",
   "engines": {
@@ -50,7 +50,7 @@
     "@babel/core": "^7.24.7",
     "@babel/eslint-parser": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
-    "@sequencemedia/hooks": "^1.0.496",
+    "@sequencemedia/hooks": "^1.0.497",
     "core-js": "^3.37.1",
     "eslint": "8.57.0",
     "eslint-config-standard": "^17.1.0",
