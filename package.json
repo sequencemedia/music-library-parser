@@ -48,13 +48,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.24.9",
-    "@babel/preset-env": "^7.24.8",
-    "@sequencemedia/eslint-config-standard": "^0.0.16",
-    "@sequencemedia/hooks": "^1.0.506",
+    "@babel/preset-env": "^7.25.0",
+    "@sequencemedia/eslint-config-standard": "^0.0.17",
+    "@sequencemedia/hooks": "^1.0.507",
     "core-js": "^3.37.1",
-    "eslint": "^9.7.0",
+    "eslint": "^9.8.0",
     "globals": "^15.8.0",
-    "husky": "^9.1.2"
+    "husky": "^9.1.3"
   },
   "imports": {
     "#music-library-parser": "./src/js/index.mjs",
