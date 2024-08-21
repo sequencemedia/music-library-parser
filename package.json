@@ -49,12 +49,12 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
-    "@sequencemedia/eslint-config-standard": "^0.0.41",
-    "@sequencemedia/hooks": "^1.0.532",
-    "core-js": "^3.38.0",
+    "@sequencemedia/eslint-config-standard": "^0.0.42",
+    "@sequencemedia/hooks": "^1.0.533",
+    "core-js": "^3.38.1",
     "eslint": "^9.9.0",
     "globals": "^15.9.0",
-    "husky": "^9.1.4"
+    "husky": "^9.1.5"
   },
   "imports": {
     "#music-library-parser": "./src/js/index.mjs",
