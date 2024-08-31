@@ -9,7 +9,7 @@ import {
 
 export function clear (destination = './Music Library') {
   return (
-    rimraf.sync(
+    rimraf( // ).sync(
       join(
         resolve(destination),
         '*'
