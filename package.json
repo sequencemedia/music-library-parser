@@ -44,7 +44,8 @@
   },
   "dependencies": {
     "cross-env": "^7.0.3",
-    "debug": "^4.3.6"
+    "debug": "^4.3.6",
+    "rimraf": "^6.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
