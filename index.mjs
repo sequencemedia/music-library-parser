@@ -1,2 +1,1 @@
-//
-export * from '#music-library-parser'
+export * as default from '#music-library-parser'
