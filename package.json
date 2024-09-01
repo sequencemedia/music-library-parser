@@ -36,11 +36,11 @@
     "url": "https://github.com/sequencemedia/music-library-parser/issues"
   },
   "scripts": {
-    "dev": "cross-env DEBUG=@sequencemedia/music-library-parser* NODE_ENV=development node .",
+    "dev": "cross-env NODE_ENV=development node .",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "husky",
-    "start": "cross-env DEBUG=@sequencemedia/music-library-parser* NODE_ENV=production node ."
+    "start": "cross-env NODE_ENV=production node ."
   },
   "dependencies": {
     "cross-env": "^7.0.3",
