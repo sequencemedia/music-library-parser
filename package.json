@@ -59,12 +59,6 @@
   },
   "imports": {
     "#music-library-parser": "./src/js/index.mjs",
-    "#music-library-parser/library": "./src/js/library/index.mjs",
-    "#music-library-parser/library/playlists": "./src/js/library/playlists/index.mjs",
-    "#music-library-parser/library/playlists/transform": "./src/js/library/playlists/transform/index.mjs",
-    "#music-library-parser/library/tracks": "./src/js/library/tracks/index.mjs",
-    "#music-library-parser/library/tracks/transform": "./src/js/library/tracks/transform/index.mjs",
-    "#music-library-parser/library/transform": "./src/js/library/transform/index.mjs",
-    "#music-library-parser/transform": "./src/js/transform/index.mjs"
+    "#music-library-parser/*": "./src/js/*/index.mjs"
   }
 }

@@ -1,4 +1,2 @@
 //
-import * as musicLibraryParser from '#music-library-parser'
-
-export default musicLibraryParser
+export * from '#music-library-parser'
