@@ -1,6 +1,6 @@
 {
   "name": "@sequencemedia/music-library-parser",
-  "version": "1.1.16",
+  "version": "1.1.17",
   "description": "Parse Apple Music Library XML to JSON, JS, ES, or M3U",
   "keywords": [
     "music",
