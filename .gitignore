@@ -21,3 +21,6 @@
 
 # Deps
 .depsrc
+
+# Hooks
+.husky/hooks
