@@ -50,9 +50,9 @@
   "devDependencies": {
     "@babel/core": "^7.25.8",
     "@babel/preset-env": "^7.25.8",
-    "@sequencemedia/eslint-config-standard": "^0.0.75",
+    "@sequencemedia/eslint-config-standard": "^0.0.76",
     "core-js": "^3.38.1",
-    "eslint": "^9.12.0",
+    "eslint": "^9.13.0",
     "globals": "^15.11.0",
     "husky": "^9.1.6"
   },
