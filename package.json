@@ -48,8 +48,8 @@
     "rimraf": "^6.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.8",
-    "@babel/preset-env": "^7.25.8",
+    "@babel/core": "^7.25.9",
+    "@babel/preset-env": "^7.25.9",
     "@sequencemedia/eslint-config-standard": "^0.0.76",
     "core-js": "^3.38.1",
     "eslint": "^9.13.0",
