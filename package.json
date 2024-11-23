@@ -29,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sequencemedia/music-library-parser"
+    "url": "git://github.com/sequencemedia/music-library-parser.git"
   },
   "homepage": "https://github.com/sequencemedia/music-library-parser",
   "bugs": {
