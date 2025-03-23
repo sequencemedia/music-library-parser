@@ -15,7 +15,6 @@ jobs:
             .publish/publish.sh
 
 workflows:
-  version: 2
   commit-workflow:
     jobs:
       - publish:
