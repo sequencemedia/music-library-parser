@@ -2,15 +2,18 @@ import {
   exec
 } from 'node:child_process'
 
-import path from 'path'
+import {
+  dirname,
+  resolve
+} from 'node:path'
 
 import {
   fileURLToPath
-} from 'url'
+} from 'node:url'
 
 import {
   readFile
-} from 'fs/promises'
+} from 'node:fs/promises'
 
 import debug from 'debug'
 
@@ -20,17 +23,20 @@ import {
 
 const error = debug('@sequencemedia/music-library-parser:to-json:error')
 
-const cwd = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../../..')
-const xsl = path.resolve(cwd, 'src/xsl/library/tracks/to-json.xsl')
-const DESTINATION = path.resolve(cwd, '.music-library/playlists.json')
+const cwd = resolve(dirname(fileURLToPath(import.meta.url)), '../../../../..')
+const xsl = resolve(cwd, 'src/xsl/library/tracks/to-json.xsl')
+const DESTINATION = resolve(cwd, '.music-library/playlists.json')
 
 /**
  *  `maxBuffer`
  */
 export function parse (jar, xml, destination = DESTINATION) {
+  const j = resolve(jar)
+  const x = resolve(xml)
+
   return (
     new Promise((resolve, reject) => {
-      exec(`java -jar "${path.resolve(jar)}" -s:"${path.resolve(xml)}" -xsl:"${xsl}" -o:"${destination}"`, { cwd }, (e) => (!e) ? resolve() : reject(e))
+      exec(`java -jar "${j}" -s:"${x}" -xsl:"${xsl}" -o:"${destination}"`, { cwd }, (e) => (!e) ? resolve() : reject(e))
     })
   )
 }

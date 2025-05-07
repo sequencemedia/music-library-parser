@@ -2,11 +2,14 @@ import {
   exec
 } from 'node:child_process'
 
-import path from 'path'
+import {
+  dirname,
+  resolve
+} from 'node:path'
 
 import {
   fileURLToPath
-} from 'url'
+} from 'node:url'
 
 import debug from 'debug'
 
@@ -17,16 +20,20 @@ import {
 const log = debug('@sequencemedia/music-library-parser:to-m3u')
 const error = debug('@sequencemedia/music-library-parser:to-m3u:error')
 
-const cwd = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../..')
-const xsl = path.resolve(cwd, 'src/xsl/library/playlists.xsl')
+const cwd = resolve(dirname(fileURLToPath(import.meta.url)), '../../../..')
+const xsl = resolve(cwd, 'src/xsl/library/playlists.xsl')
 
 let immediate = null
 const queue = []
 
 export function parse (jar, xml, destination = './Music Library') {
+  const j = resolve(jar)
+  const x = resolve(xml)
+  const d = resolve(destination)
+
   return (
     new Promise((resolve, reject) => {
-      exec(`java -jar "${path.resolve(jar)}" -s:"${path.resolve(xml)}" -xsl:"${xsl}" destination="${path.resolve(destination)}"`, { cwd }, (e) => (!e) ? resolve() : reject(e))
+      exec(`java -jar "${j}" -s:"${x}" -xsl:"${xsl}" destination="${d}"`, { cwd }, (e) => (!e) ? resolve() : reject(e))
     })
   )
 }
