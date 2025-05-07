@@ -55,6 +55,7 @@
   },
   "imports": {
     "#music-library-parser": "./src/js/index.mjs",
-    "#music-library-parser/*": "./src/js/*/index.mjs"
+    "#music-library-parser/*": "./src/js/*/index.mjs",
+    "#where-am-i": "./where-am-i.mjs"
   }
 }

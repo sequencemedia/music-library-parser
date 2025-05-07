@@ -3,14 +3,9 @@ import {
 } from 'node:child_process'
 
 import {
-  dirname,
   resolve,
   join
 } from 'node:path'
-
-import {
-  fileURLToPath
-} from 'node:url'
 
 import {
   readFile
@@ -22,11 +17,12 @@ import {
   transform
 } from '#music-library-parser/transform'
 
+import hereIAm from '#where-am-i'
+
 const error = debug('@sequencemedia/music-library-parser:to-json:error')
 
-const cwd = resolve(dirname(fileURLToPath(import.meta.url)), '../../../../..')
-const xsl = join(cwd, 'src/xsl/library/tracks/to-json.xsl')
-const DESTINATION = join(cwd, '.music-library/playlists.json')
+const xsl = join(hereIAm, 'src/xsl/library/tracks/to-json.xsl')
+const DESTINATION = join(hereIAm, '.music-library/playlists.json')
 
 /**
  *  `maxBuffer`
@@ -34,10 +30,11 @@ const DESTINATION = join(cwd, '.music-library/playlists.json')
 export function parse (jar, xml, destination = DESTINATION) {
   const j = resolve(jar)
   const x = resolve(xml)
+  const d = resolve(destination)
 
   return (
     new Promise((resolve, reject) => {
-      exec(`java -jar "${j}" -s:"${x}" -xsl:"${xsl}" -o:"${destination}"`, { cwd }, (e) => (!e) ? resolve() : reject(e))
+      exec(`java -jar "${j}" -s:"${x}" -xsl:"${xsl}" -o:"${d}"`, { cwd: hereIAm }, (e) => (!e) ? resolve() : reject(e))
     })
   )
 }

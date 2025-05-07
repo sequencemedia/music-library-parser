@@ -3,14 +3,9 @@ import {
 } from 'node:child_process'
 
 import {
-  dirname,
   resolve,
   join
 } from 'node:path'
-
-import {
-  fileURLToPath
-} from 'node:url'
 
 import debug from 'debug'
 
@@ -18,11 +13,12 @@ import {
   clear
 } from '#music-library-parser'
 
+import hereIAm from '#where-am-i'
+
 const log = debug('@sequencemedia/music-library-parser:to-m3u')
 const error = debug('@sequencemedia/music-library-parser:to-m3u:error')
 
-const cwd = resolve(dirname(fileURLToPath(import.meta.url)), '../../../..')
-const xsl = join(cwd, 'src/xsl/library/tracks.xsl')
+const xsl = join(hereIAm, 'src/xsl/library/tracks.xsl')
 
 let immediate = null
 const queue = []
@@ -34,7 +30,7 @@ export function parse (jar, xml, destination = './Music Library') {
 
   return (
     new Promise((resolve, reject) => {
-      exec(`java -jar "${j}" -s:"${x}" -xsl:"${xsl}" destination="${d}"`, { cwd }, (e) => (!e) ? resolve() : reject(e))
+      exec(`java -jar "${j}" -s:"${x}" -xsl:"${xsl}" destination="${d}"`, { cwd: hereIAm }, (e) => (!e) ? resolve() : reject(e))
     })
   )
 }
