@@ -4,7 +4,8 @@ import {
 
 import {
   dirname,
-  resolve
+  resolve,
+  join
 } from 'node:path'
 
 import {
@@ -24,8 +25,8 @@ import {
 const error = debug('@sequencemedia/music-library-parser:to-json:error')
 
 const cwd = resolve(dirname(fileURLToPath(import.meta.url)), '../../../../..')
-const xsl = resolve(cwd, 'src/xsl/library/tracks/to-json.xsl')
-const DESTINATION = resolve(cwd, '.music-library/tracks.json')
+const xsl = join(cwd, 'src/xsl/library/tracks/to-json.xsl')
+const DESTINATION = join(cwd, '.music-library/tracks.json')
 
 /**
  *  `maxBuffer`

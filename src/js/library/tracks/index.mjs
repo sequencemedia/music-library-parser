@@ -4,7 +4,8 @@ import {
 
 import {
   dirname,
-  resolve
+  resolve,
+  join
 } from 'node:path'
 
 import {
@@ -21,7 +22,7 @@ const log = debug('@sequencemedia/music-library-parser:to-m3u')
 const error = debug('@sequencemedia/music-library-parser:to-m3u:error')
 
 const cwd = resolve(dirname(fileURLToPath(import.meta.url)), '../../../..')
-const xsl = resolve(cwd, 'src/xsl/library/tracks.xsl')
+const xsl = join(cwd, 'src/xsl/library/tracks.xsl')
 
 let immediate = null
 const queue = []
