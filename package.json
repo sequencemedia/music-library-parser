@@ -44,11 +44,11 @@
   },
   "dependencies": {
     "cross-env": "^10.0.0",
-    "debug": "^4.4.1",
+    "debug": "^4.4.3",
     "rimraf": "^6.0.1"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "^0.2.82",
+    "@sequencemedia/eslint-config-standard": "^0.2.83",
     "eslint": "^9.35.0",
     "globals": "^16.4.0",
     "husky": "^9.1.7"
