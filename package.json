@@ -39,7 +39,7 @@
     "dev": "cross-env NODE_ENV=development node .",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "husky",
+    "prepare": "node husky.mjs",
     "start": "cross-env NODE_ENV=production node ."
   },
   "dependencies": {
