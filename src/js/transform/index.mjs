@@ -1,28 +1,31 @@
-export const transformObjectToMap = (o, m) => {
-  Object.entries(o)
-    .forEach(([key, value] = []) => {
-      switch ((value || false).constructor) {
-        case Object:
-          m.set(key, transformObjectToMap(value, new Map()))
-          break
+const DATE = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z/
 
-        case Array:
-          m.set(key, transformArrayToSet(value, new Set()))
-          break
-
-        default:
-          m.set(key, /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z/.test(value) ? new Date(value) : value)
-          break
-      }
-    })
-  return m
+function reduceSet (s, o) {
+  return s.add(transform(o))
 }
 
-export const transformArrayToSet = (a, s) => {
-  a.forEach((o) => {
-    s.add(transform(o))
-  })
-  return s
+function reduceMap (m, [key, value]) {
+  switch ((value || false).constructor) {
+    case Array:
+      return m.set(key, transformArrayToSet(value, new Set()))
+
+    case Object:
+      return m.set(key, transformObjectToMap(value, new Map()))
+  }
+
+  return m.set(key, DATE.test(value) ? new Date(value) : value)
 }
 
-export const transform = (v) => Array.isArray(v) ? transformArrayToSet(v, new Set()) : transformObjectToMap(v, new Map())
+export function transformArrayToSet (a, s) {
+  return a.reduce(reduceSet, s)
+}
+
+export function transformObjectToMap (o, m) {
+  return Object.entries(o).reduce(reduceMap, m)
+}
+
+export function transform (v) {
+  return Array.isArray(v)
+    ? transformArrayToSet(v, new Set())
+    : transformObjectToMap(v, new Map())
+}
