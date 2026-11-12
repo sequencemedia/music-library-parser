@@ -21,7 +21,7 @@ import hereIAm from '#where-am-i'
 
 const error = debug('@sequencemedia/music-library-parser:to-json:error')
 
-const xsl = join(hereIAm, 'src/xsl/library/tracks/to-json.xsl')
+const xsl = join(hereIAm, 'src/xsl/library/playlists/to-json.xsl')
 const DESTINATION = join(hereIAm, '.music-library/playlists.json')
 
 /**
