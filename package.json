@@ -48,8 +48,8 @@
     "rimraf": "^6.1.4"
   },
   "devDependencies": {
-    "@sequencemedia/eslint-config-standard": "0.4.6",
-    "eslint": "10.15.0",
+    "@sequencemedia/eslint-config-standard": "0.4.7",
+    "eslint": "10.16.0",
     "globals": "^17.14.0",
     "husky": "^9.1.7"
   },
